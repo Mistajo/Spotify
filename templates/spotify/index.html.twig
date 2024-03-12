@@ -3,20 +3,35 @@
 {% block title %}Hello SpotifyController!
 {% endblock %}
 
-{% block body %}
 
-	<article>
-		<header>
-			<h1>Your Top 30 Playlist Is Updated In Spotify</h1>
-		</header>
-		<h3>Here is Your NEW Playlist:</h3>
-		<ul>
-			{% for item in tracks.items %}
-				<li>{{item.track.name}}
-					-
-					{{item.track.artists[0].name}}</li>
-			{% endfor %}
-		</ul>
-	</article>
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5GlLiwcwZGcNx7ymjqf7HO?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+			</div>
+			<div class=" col-md-6">
+				<article>
+					<header>
+						<h1>Your Top 30 Playlist Is Updated In Spotify</h1>
+					</header>
+					<h3>Here is Your NEW Playlist:</h3>
+					<ul>
+						{% for item in tracks.items %}
+							<li>{{ item.track.name }}
+								-
+								{{ item.track.artists[0].name }}
+							</li>
+						{% endfor %}
+					</ul>
+				</article>
+
+			</div>
+
+		</div>
+
+	</div>
+
 
 {% endblock %}

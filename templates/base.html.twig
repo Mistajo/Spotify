@@ -13,9 +13,19 @@
 			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
 		{% endblock %}
 
+		{% block jquery %}
+			<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+		{% endblock %}
+
+		{% block howler %}{% endblock %}
+
+
 	</head>
 	<body>
 		<main class="container"> {% block body %}{% endblock %}
 			</main>
+
+
 		</body>
 	</html>
